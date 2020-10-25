@@ -1,4 +1,4 @@
-package demoQAElements;
+package tests.demoQAElements;
 
 
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -7,6 +7,7 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -16,6 +17,7 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Rinat")
 @Feature("RadioButtonTest")
+@Tag("RadioButtonTest")
 public class RadioButtonTests {
     private static final String BASE_URL = "https://demoqa.com/";
 

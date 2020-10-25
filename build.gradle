@@ -21,11 +21,7 @@ allure {
 
 dependencies {
     compile("io.qameta.allure:allure-java-commons:2.13.5")
-    compile("io.qameta.allure:allure-rest-assured:2.13.5")
     compile("io.qameta.allure:allure-selenide:2.13.5")
-
-    compile("io.rest-assured:rest-assured:4.3.1")
-    compile("com.fasterxml.jackson.core:jackson-databind:2.11.2")
 
     compile("com.codeborne:selenide:5.13.1")
     compile("org.junit.jupiter:junit-jupiter-api:5.6.2")
@@ -39,4 +35,20 @@ tasks.withType(JavaCompile) {
 
 test {
     useJUnitPlatform()
+}
+
+tasks.withType(Test){
+    systemProperties = System.properties
+}
+
+task demo_test(type: Test){
+    useJUnitPlatform{
+        // Для запуска конкретных тестов тестов по тэгу
+        /*includeTags 'RadioButtonTest'
+        includeTags 'TextBoxTest'
+        includeTags 'TextBoxTest'
+
+        Для исключения теста по тэгу:
+        excludeTags '' */
+    }
 }
