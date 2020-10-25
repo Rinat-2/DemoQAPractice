@@ -34,7 +34,7 @@ public class CheckBoxTests {
     @DisplayName("CheckBoxTest")
     public void checkBoxTest(){
         step("Open website DemoQAPractice and click on Elements", () -> {
-            open(BASE_URL);
+            open("https://demoqa.com/");
             $(".card-up").click();
         });
         step("In the checkbox box, select the elements that you want to click on", () -> {
